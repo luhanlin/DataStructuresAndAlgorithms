@@ -2,6 +2,7 @@ package com.luhanlin.algorithms.sort.bubble;
 
 /**
  * @description: bubble sort 【稳定排序】
+ *               时间复杂度： O(N^2)
  * @author: Mr.Lu
  * @create: 2019-04-01 13:49
  **/

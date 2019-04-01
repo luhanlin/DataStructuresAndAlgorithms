@@ -1,9 +1,7 @@
 package com.luhanlin.algorithms.sort.quick;
 
-import java.util.Random;
-
 /**
- * @description: Quick sort 【稳定排序】
+ * @description: Quick sort 【稳定排序】 时间复杂度 min: O(log(N+1)) mid: O(N log(N+1)) max: O(N^2)
  * @author: Mr.Lu
  * @create: 2019-04-01 14:15
  **/
@@ -21,8 +19,6 @@ public class QuickSort {
             int j = r;
 
             // 获取初始中间变量
-            Random random = new Random();
-            int x = random.nextInt(j - l) + l;
             int middle = a[i];
 
             while (i < j) {
