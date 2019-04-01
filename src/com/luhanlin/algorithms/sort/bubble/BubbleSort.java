@@ -1,7 +1,7 @@
 package com.luhanlin.algorithms.sort.bubble;
 
 /**
- * @description: bubble sort
+ * @description: bubble sort 【稳定排序】
  * @author: Mr.Lu
  * @create: 2019-04-01 13:49
  **/
@@ -49,9 +49,6 @@ public class BubbleSort {
 
     /**
      * swap a[i] and a[j]
-     * @param a
-     * @param i
-     * @param j
      */
     private static void swap(int[] a, int i, int j) {
         int temp = a[i];

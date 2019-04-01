@@ -1,5 +1,7 @@
 package com.luhanlin.algorithms.sort.bubble;
 
+import com.luhanlin.algorithms.sort.CommonUtils;
+
 /**
  * @description:
  * @author: Mr.Lu
@@ -14,12 +16,7 @@ public class BubbleTest {
 
         BubbleSort.sortUpgrade01(a, a.length);
 
-        printf(a);
+        CommonUtils.printf(a);
     }
 
-    private static void printf(int[] a) {
-        for (int n : a) {
-            System.out.print(n + "\t");
-        }
-    }
 }
