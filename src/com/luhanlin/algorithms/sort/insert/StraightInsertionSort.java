@@ -1,7 +1,9 @@
 package com.luhanlin.algorithms.sort.insert;
 
+import com.luhanlin.algorithms.sort.CommonUtils;
+
 /**
- * @description: 直接插入排序
+ * @description: 直接插入排序 复杂度 O(N^2)
  * @author: Mr.Lu
  * @create: 2019-04-01 15:08
  **/
@@ -32,5 +34,13 @@ public class StraightInsertionSort {
                 a[k + 1] = temp;
             }
         }
+    }
+
+    public static void main(String[] args) {
+        int[] a = {21,88,11,61,32,12,1,3,4};
+
+        sort(a, a.length);
+
+        CommonUtils.printf(a);
     }
 }
