@@ -1,6 +1,6 @@
 package com.luhanlin.algorithms.sort.insert;
 
-import com.luhanlin.algorithms.sort.CommonUtils;
+import com.luhanlin.Utils.CommonUtils;
 
 /**
  * @description: 直接插入排序 复杂度 O(N^2)
@@ -16,7 +16,6 @@ public class StraightInsertionSort {
      */
     public static void sort(int[] a, int n) {
         int i, j, k;
-
         for (i = 1; i < n; i++) {
 
             //为a[i]在前面的a[0...i-1]有序区间中找一个合适的位置

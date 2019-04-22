@@ -1,6 +1,6 @@
 package com.luhanlin.algorithms.sort.bubble;
 
-import com.luhanlin.algorithms.sort.CommonUtils;
+import com.luhanlin.Utils.CommonUtils;
 
 /**
  * @description:

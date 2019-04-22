@@ -1,6 +1,6 @@
 package com.luhanlin.algorithms.sort.shell;
 
-import com.luhanlin.algorithms.sort.CommonUtils;
+import com.luhanlin.Utils.CommonUtils;
 
 /**
  * @description: 希尔排序 在直接插入排序上添加了step

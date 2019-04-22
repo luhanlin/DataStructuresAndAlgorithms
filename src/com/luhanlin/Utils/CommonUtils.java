@@ -1,4 +1,4 @@
-package com.luhanlin.algorithms.sort;
+package com.luhanlin.Utils;
 
 /**
  * @description:
