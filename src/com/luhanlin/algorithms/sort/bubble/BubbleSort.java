@@ -34,16 +34,21 @@ public class BubbleSort {
     public static void sortUpgrade01(int[] a, int n){
         boolean flag = true;
 
-        for (int i = n-1; i >0; i--) {
+        int lastSwapIndex = 0;
+
+        int sortBorder = a.length -1;
+
+        for (int i = 0; i < a.length; i++) {
             // 每次排序a[0 ... i]
-            for (int j = 0; j < i; j++) {
+            for (int j = 0; j < sortBorder; j++) {
                 if (a[j] > a[j+1]) {
                     // swap
                     swap(a, j, j + 1);
                     flag = false;
+                    lastSwapIndex = j;
                 }
             }
-
+            sortBorder = lastSwapIndex;
             if (flag) break;
         }
     }
