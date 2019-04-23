@@ -29,9 +29,8 @@ public class BubbleSort {
     /**
      * 冒泡排序 升级版
      * @param a 待排序的数组
-     * @param n     数组的长度
      */
-    public static void sortUpgrade01(int[] a, int n){
+    public static void sortUpgrade01(int[] a){
         boolean flag = true;
 
         int lastSwapIndex = 0;
@@ -49,6 +48,48 @@ public class BubbleSort {
                 }
             }
             sortBorder = lastSwapIndex;
+            if (flag) break;
+        }
+    }
+
+    /**
+     * 冒泡排序 升级版 鸡尾酒排序
+     * @param a 待排序的数组
+     */
+    public static void sortUpgrade02(int[] a){
+
+        int leftLastSwapIndex = 0;
+        int rightLastSwapIndex = 0;
+
+        int leftSortBorder = 0;
+        int rightSortBorder = a.length -1;
+
+        // 因为每次双向操作，所以外层循环可以除以2
+        for (int i = 0; i < a.length/2; i++) {
+            // 从左向右排序
+            boolean flag = true;
+            for (int j = leftSortBorder; j < rightSortBorder; j++) {
+                if (a[j] > a[j+1]) {
+                    // swap
+                    swap(a, j, j + 1);
+                    flag = false;
+                    rightLastSwapIndex = j;
+                }
+            }
+            rightSortBorder = rightLastSwapIndex;
+            if (flag) break;
+
+            // 从右向左排序
+            flag = true;
+            for (int j = rightSortBorder; j > leftSortBorder; j--) {
+                if (a[j] < a[j-1]) {
+                    // swap
+                    swap(a, j, j - 1);
+                    flag = false;
+                    leftLastSwapIndex = j;
+                }
+            }
+            leftSortBorder = leftLastSwapIndex;
             if (flag) break;
         }
     }
