@@ -1,4 +1,4 @@
-package com.luhanlin.structures;
+package com.luhanlin.structures.heap;
 
 import com.luhanlin.Utils.CommonUtils;
 
@@ -18,10 +18,10 @@ public class HeapOperator {
 //        upAdjust(ints, ints.length-2);
 //        CommonUtils.printf(ints);
 
-//        createHead(ints);
+//        createheap(ints);
 //        CommonUtils.printf(ints);
 
-        headSort(ints);
+        heapSort(ints);
         CommonUtils.printf(ints);
 
     }
@@ -81,7 +81,7 @@ public class HeapOperator {
      * 创建最大二叉堆，找到子节点依次下沉
      * @param array
      */
-    public static void createHead(int[] array){
+    public static void createheap(int[] array){
         // 从最后一个父节点开始遍历
         for (int i = (array.length -2) >> 1; i >=0 ; i--) {
             downAdjust(array,i, array.length);
@@ -92,8 +92,8 @@ public class HeapOperator {
      * 堆排序
      * @param array
      */
-    public static void headSort(int[] array){
-        createHead(array);
+    public static void heapSort(int[] array){
+        createheap(array);
 
         // 遍历节点，交换
         for (int i = array.length -1 ; i > 0 ; i--) {
