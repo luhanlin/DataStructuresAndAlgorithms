@@ -1,4 +1,4 @@
-package com.luhanlin.structures;
+package com.luhanlin.structures.graph;
 
 import java.util.LinkedList;
 
