@@ -81,7 +81,7 @@ public class HeapOperator {
      * 创建最大二叉堆，找到子节点依次下沉
      * @param array
      */
-    public static void createheap(int[] array){
+    public static void createHeap(int[] array){
         // 从最后一个父节点开始遍历
         for (int i = (array.length -2) >> 1; i >=0 ; i--) {
             downAdjust(array,i, array.length);
@@ -93,7 +93,7 @@ public class HeapOperator {
      * @param array
      */
     public static void heapSort(int[] array){
-        createheap(array);
+        createHeap(array);
 
         // 遍历节点，交换
         for (int i = array.length -1 ; i > 0 ; i--) {
@@ -104,4 +104,5 @@ public class HeapOperator {
             downAdjust(array, 0, i);
         }
     }
+
 }
