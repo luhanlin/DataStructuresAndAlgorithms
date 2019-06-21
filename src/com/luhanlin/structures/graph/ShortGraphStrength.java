@@ -15,14 +15,12 @@ public class ShortGraphStrength {
 
     public static class Graph {
 
-        private int size;
 
         private Vertex[] vertexs;
 
         private LinkedList<Edge> listArr[];
 
         public Graph(int size) {
-            this.size = size;
             vertexs = new Vertex[size];
             listArr = new LinkedList[size];
 
