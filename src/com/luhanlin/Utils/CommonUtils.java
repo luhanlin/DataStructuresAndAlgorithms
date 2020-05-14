@@ -1,5 +1,7 @@
 package com.luhanlin.Utils;
 
+import com.luhanlin.jksj.link.ListNode;
+
 /**
  * @description:
  * @author: Mr.Lu
@@ -11,5 +13,16 @@ public class CommonUtils {
         for (int n : a) {
             System.out.print(n + "\t");
         }
+    }
+
+    public static void printAll(ListNode node){
+        ListNode nextNode = node;
+
+        while (nextNode != null) {
+            System.out.print(nextNode.getVal() + " ");
+            nextNode = nextNode.getNext();
+        }
+
+        System.out.println();
     }
 }
