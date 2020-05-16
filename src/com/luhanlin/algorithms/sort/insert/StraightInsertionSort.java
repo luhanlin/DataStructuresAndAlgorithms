@@ -35,10 +35,30 @@ public class StraightInsertionSort {
         }
     }
 
+
+    public static void insertSort(int[] a, int n){
+        if (a.length <=0) return;
+
+        for (int i = 1; i < n; i++) {
+            int value = a[i];
+            int j = i-1;
+            for (; j >=0 ; j--) {
+                if (a[j] > value) {
+                    a[j+1] = a[j];
+                } else {
+                    break;
+                }
+            }
+
+            a[j+1] = value;
+        }
+
+    }
+
     public static void main(String[] args) {
         int[] a = {21,88,11,61,32,12,1,3,4};
 
-        sort(a, a.length);
+        insertSort(a, a.length);
 
         CommonUtils.printf(a);
     }
