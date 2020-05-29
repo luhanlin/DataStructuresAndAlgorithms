@@ -48,7 +48,42 @@ public class CountingSort {
 
     public static void main(String[] args) {
         int[] a = {9, 7, 6, 3, 9, 2, 7, 3, 2, 8};
-        CountingSort.sort(a);
+        CountingSort.countSort(a);
         System.out.println(Arrays.toString(a));
+    }
+
+    public static void countSort(int[] a){
+        // 获取数组中最大最小值
+        int max = Arrays.stream(a).max().getAsInt();
+        int min = Arrays.stream(a).min().getAsInt();
+
+        // 划分桶
+        int len = max - min + 1;
+        int[] c = new int[len +1];
+
+        // 对数组a中的元素进行计数
+        for (int i = 0; i < a.length; i++) {
+            c[a[i]-min+1]++;
+        }
+
+        // 累加数据
+        for (int j = 1; j < c.length; j++) {
+            c[j] += c[j-1];
+        }
+
+        // 用一个临时数组，存放排序后的数据
+        int[] tmp = new int[a.length];
+
+        for (int r = a.length -1; r >=0; r--) {
+            int cIndex = a[r] - min + 1;
+            int index = c[cIndex] -1;
+            tmp[index] = a[r];
+            c[cIndex]--;
+        }
+
+        for (int i = 0; i < a.length; i++) {
+            a[i] = tmp[i];
+        }
+
     }
 }
