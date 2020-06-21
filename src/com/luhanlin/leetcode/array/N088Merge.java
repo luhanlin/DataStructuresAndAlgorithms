@@ -37,10 +37,10 @@ public class N088Merge {
             nums1[c--] = (nums1[a] > nums2[b]) ? nums1[a--] : nums2[b--];
         }
         // 将nums2 剩余的数据填入num1
-//        System.arraycopy(nums2,0,nums1,0,b + 1);
+        System.arraycopy(nums2,0,nums1,0,b + 1);
 
-        for (int i = 0; i < b + 1; i++) {
-            nums1[i] = nums2[i];
-        }
+//        for (int i = 0; i < b + 1; i++) {
+//            nums1[i] = nums2[i];
+//        }
     }
 }
