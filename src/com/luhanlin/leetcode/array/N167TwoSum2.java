@@ -69,4 +69,28 @@ public class N167TwoSum2 {
         return new int[]{-1, -1};
     }
 
+    /**
+     * 使用二分法查找
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int[] twoSum3(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) {
+            int l = i + 1;
+            int r = nums.length -1;
+            while (l < r) {
+                int mid = l + (r-l)/2;
+                if (nums[i] + nums[mid] < target) {
+                    l = mid + 1;
+                } else if (nums[i] + nums[mid] > target) {
+                    r = mid - 1;
+                } else {
+                    return new int[]{i, mid};
+                }
+            }
+        }
+        return new int[]{-1,-1};
+    }
+
 }

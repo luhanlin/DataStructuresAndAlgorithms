@@ -1,7 +1,7 @@
 package com.luhanlin.leetcode.link;
 
 /**
- * 类详细描述：
+ * 类详细描述：编写一个程序，找到两个单链表相交的起始节点。
  *
  * @author Mr_lu
  * @version 1.0
