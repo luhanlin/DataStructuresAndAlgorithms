@@ -12,17 +12,55 @@ package com.luhanlin.leetcode.link;
  */
 public class N141HasCycle {
 
+    /**
+     * 判断是否有环
+     * @param head
+     * @return
+     */
     public boolean hasCycle(ListNode head) {
         if (head == null || head.next == null) return false;
         ListNode slow = head;
-        ListNode fast = head.next;
+        ListNode fast = head;
 
-        while (slow.next != null && fast != null && fast.next != null) {
-            if (slow == fast) return true;
-
+        while (slow.next != null && fast.next != null && fast.next.next != null) {
             slow = slow.next;
             fast = fast.next.next;
+
+            if (slow == fast) return true;
         }
         return false;
+    }
+
+    /**
+     * 环的起始节点
+     * @param head
+     * @return
+     */
+    public ListNode detectCycle(ListNode head) {
+        if (head == null || head.next == null) return null;
+        boolean hasCycle = false;
+        // 判断是否有环
+        ListNode s = head;
+        ListNode f = head;
+
+        while (s.next != null && f.next != null && f.next.next != null) {
+            s = s.next;
+            f = f.next.next;
+            if (s == f) {
+                hasCycle = true;
+                break;
+            }
+        }
+        // 寻找节点 s
+        if (hasCycle) {
+            f = head;
+            while (f != s) {
+                f = f.next;
+                s = s.next;
+            }
+            return s;
+        }
+
+        return null;
     }
 }

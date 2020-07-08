@@ -7,10 +7,10 @@ import java.util.Arrays;
  * @author: Mr.Lu
  * @create: 2019-04-24 15:51
  **/
-public class PriorityQueue {
+public class MyPriorityQueue {
 
     public static void main(String[] args) {
-        PriorityQueue queue = new PriorityQueue();
+        MyPriorityQueue queue = new MyPriorityQueue();
         queue.enQueue(11);
         queue.enQueue(125);
         queue.enQueue(1);
@@ -26,7 +26,7 @@ public class PriorityQueue {
     private int[] array;
     private int size;
 
-    public PriorityQueue() {
+    public MyPriorityQueue() {
         this.array = new int[32];
     }
 
