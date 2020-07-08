@@ -1,5 +1,7 @@
 package com.luhanlin.leetcode.link;
 
+import javafx.beans.binding.When;
+
 /**
  * 类详细描述：
  *
@@ -27,5 +29,15 @@ public class ListNode {
     public ListNode add(int a){
         this.next = new ListNode(a);
         return this.next;
+    }
+
+    public void printVal(){
+        ListNode root = this;
+        StringBuilder b = new StringBuilder();
+        while (root != null) {
+            b.append(root.val).append("->");
+            root = root.next;
+        }
+        System.out.println(b.toString());
     }
 }

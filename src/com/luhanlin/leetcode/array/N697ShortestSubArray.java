@@ -26,7 +26,6 @@ public class N697ShortestSubArray {
 
     public static int findShortestSubArray(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<>();
-
         // 计数
         for (int i = 0; i < nums.length; i++) {
             map.put(nums[i], map.getOrDefault(nums[i],0) + 1);

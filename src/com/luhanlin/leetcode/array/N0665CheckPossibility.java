@@ -10,7 +10,7 @@ package com.luhanlin.leetcode.array;
  * @mail allen_lu_hh@163.com
  * 创建时间：2020/6/24 3:50 下午
  */
-public class N0665 {
+public class N0665CheckPossibility {
 
     /**
      * 其实说的简单点，有2种情况：
