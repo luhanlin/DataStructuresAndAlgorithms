@@ -12,6 +12,18 @@ import java.util.Queue;
  * 创建时间：2020/6/28 7:05 下午
  */
 public class N225MyStack {
+    public static void main(String[] args) {
+        N225MyStack stack = new N225MyStack();
+        stack.push(1);
+        stack.push(3);
+        stack.push(5);
+
+        while (!stack.empty()) {
+            System.out.println(stack.pop());
+        }
+
+    }
+
     Queue<Integer> in;
     Queue<Integer> out;
 
