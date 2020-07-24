@@ -1,7 +1,5 @@
 package com.luhanlin.leetcode.tree;
 
-import com.sun.corba.se.impl.resolver.SplitLocalResolverImpl;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
